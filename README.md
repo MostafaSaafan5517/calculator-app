@@ -1,4 +1,4 @@
-# Calculator App <img src="./public/favicon.ico" alt="" />
+# Calculator App
 
 <img src="./public/claculator-app.jpg" width="100%" alt="" />
 
