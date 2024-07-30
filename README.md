@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 ![Design preview for the Calculator app coding challenge](./public/claculator-app.jpg)
 
 - Live Preview ⭕🔗: https://calculator-app-six-nu.vercel.app
