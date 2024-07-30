@@ -2,7 +2,7 @@
 
 <img src="./public/claculator-app.jpg" width="100%" alt="" />
 
-- Live Preview ⭕🔗: <a href="https://calculator-app-react-project.vercel.app" target="_blank">https://calculator-app-react-project.vercel.app</a>
+- Live Preview ⭕🔗: https://calculator-app-react-project.vercel.app
 
 ## Introduction
 
