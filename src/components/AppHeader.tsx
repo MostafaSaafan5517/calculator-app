@@ -29,7 +29,7 @@ function AppHeader() {
   };
 
   return (
-    <div className="header">
+    <section className="header">
       <h2>Calc</h2>
 
       <div className="theme">
@@ -45,7 +45,7 @@ function AppHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
