@@ -1,4 +1,4 @@
-# Calculator App <img src="./public/maths.gif" width="20px" height="20px" alt="">
+# Calculator App <img src="./public/maths.gif" width="30px" height="30px" alt="">
 
 <img src="./public/claculator-app.jpg" width="100%" alt="" />
 
