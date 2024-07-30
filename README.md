@@ -1,4 +1,6 @@
-![Design preview for the Calculator app coding challenge](./public/claculator-app.jpg)
+# Calc
+
+<img src="./public/claculator-app.jpg" width="100%" alt="Design preview for the Calculator app" />
 
 - Live Preview ⭕🔗: https://calculator-app-six-nu.vercel.app
 
