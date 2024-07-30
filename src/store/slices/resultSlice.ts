@@ -55,7 +55,7 @@ export const resultSlice = createSlice({
             break;
         }
       }
-      state.value = String(result) === "NaN" ? "Not Valid" : String(result);
+      state.value = String(result) === "NaN" ? "Error" : String(result);
     },
   },
 });
