@@ -18,11 +18,7 @@ It follows the principles of single-page application (SPA) architecture, where t
 
 Calc is built using the following technologies:
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,sass,ts,react,redux" />
-  </a>
-</p>
+[![My Skills](https://skillicons.dev/icons?i=html,sass,ts,react,redux)](https://skillicons.dev)
 
 ## Installation
 
