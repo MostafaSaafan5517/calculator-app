@@ -1,6 +1,6 @@
-# Calc
+# Calculator App <img src="./public/favicon.ico" alt="" />
 
-<img src="./public/claculator-app.jpg" width="100%" alt="Design preview for the Calculator app" />
+<img src="./public/claculator-app.jpg" width="100%" alt="" />
 
 - Live Preview ⭕🔗: https://calculator-app-six-nu.vercel.app
 
