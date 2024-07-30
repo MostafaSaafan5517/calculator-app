@@ -18,11 +18,11 @@ It follows the principles of single-page application (SPA) architecture, where t
 
 Calc is built using the following technologies:
 
-- HTML5
-- SCSS
-- Typescript
-- Reactjs
-- Redux Toolkit
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,sass,ts,react,redux" />
+  </a>
+</p>
 
 ## Installation
 
