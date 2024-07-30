@@ -1,0 +1,77 @@
+@use "utils/colors" as *;
+
+body {
+  font-family: "League Spartan", sans-serif;
+  transition: 0.4s;
+
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    transition: inherit;
+  }
+}
+
+.app {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+}
+
+.result {
+  height: 100px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  font: {
+    size: 36px;
+    weight: 600;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    width: 100%;
+  }
+}
+
+// Theme 1
+body.theme1 {
+  background-color: $theme1-primary-color;
+
+  .result {
+    background-color: $theme1-secondary-color;
+    color: $theme1-button-primary-color;
+  }
+}
+
+// Theme 2
+body.theme2 {
+  background-color: $theme2-primary-color;
+
+  .result {
+    background-color: adjust-color(
+      $color: $theme2-primary-color,
+      $lightness: 5%
+    );
+    color: $theme2-secondary-color;
+  }
+}
+
+// Theme 3
+body.theme3 {
+  background-color: $theme3-primary-color;
+
+  .result {
+    background-color: adjust-color(
+      $color: $theme3-primary-color,
+      $lightness: 5%
+    );
+    color: $theme3-secondary-color;
+  }
+}

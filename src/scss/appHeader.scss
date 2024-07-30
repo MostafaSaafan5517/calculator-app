@@ -1,0 +1,126 @@
+@use "utils/colors" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.theme {
+  display: flex;
+  align-items: flex-end;
+
+  & > span {
+    font: {
+      size: 14px;
+      weight: 500;
+    }
+
+    margin: {
+      right: 10px;
+      bottom: 3px;
+    }
+  }
+
+  .toggle {
+    .nums {
+      margin-bottom: 3px;
+      font-weight: 600;
+      transition: 0.05s !important;
+      span {
+        margin: 0 8px;
+        font-size: 12px;
+      }
+    }
+
+    .bar {
+      height: 20px;
+      border-radius: 20px;
+      position: relative;
+
+      .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 5px solid;
+        box-sizing: initial;
+        position: absolute;
+        pointer-events: none;
+        left: 0px;
+      }
+    }
+  }
+}
+
+// Theme 1
+body.theme1 {
+  .header h2 {
+    color: $theme1-button-primary-color;
+  }
+
+  .theme {
+    color: $theme1-button-primary-color;
+
+    .bar {
+      background-color: $theme1-secondary-color;
+
+      .circle {
+        background-color: $theme1-tertiary-color;
+        border-color: $theme1-secondary-color;
+      }
+    }
+  }
+}
+
+// Theme 2
+body.theme2 {
+  .header h2 {
+    color: $theme2-secondary-color;
+  }
+
+  .theme {
+    color: $theme2-secondary-color;
+
+    .bar {
+      background-color: adjust-color(
+        $color: $theme2-primary-color,
+        $blackness: $theme2-primary-blackness
+      );
+
+      .circle {
+        background-color: $theme2-tertiary-color;
+        border-color: adjust-color(
+          $color: $theme2-primary-color,
+          $blackness: $theme2-primary-blackness
+        );
+      }
+    }
+  }
+}
+
+// Theme 3
+body.theme3 {
+  .header h2 {
+    color: $theme3-secondary-color;
+  }
+
+  .theme {
+    color: $theme3-secondary-color;
+
+    .bar {
+      background-color: adjust-color(
+        $color: $theme3-primary-color,
+        $blackness: $theme3-primary-blackness
+      );
+
+      .circle {
+        background-color: $theme3-tertiary-color;
+        border-color: adjust-color(
+          $color: $theme3-primary-color,
+          $blackness: $theme3-primary-blackness
+        );
+      }
+    }
+  }
+}

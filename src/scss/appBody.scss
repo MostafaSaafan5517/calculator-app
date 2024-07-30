@@ -1,0 +1,155 @@
+@use "utils/colors" as *;
+
+.body {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.button {
+  font: {
+    size: 26px;
+    weight: 600;
+  }
+  height: 50px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 5px;
+  border-bottom: 4px solid;
+
+  &[data-value="RESET"] {
+    grid-area: 5 / 1 / 6 / 3;
+  }
+  &[data-value="="] {
+    grid-area: 5 / 3 / 6 / 5;
+  }
+}
+
+// Theme 1
+body.theme1 {
+  .body {
+    background-color: $theme1-secondary-color;
+  }
+
+  .button {
+    background-color: $theme1-button-primary-color;
+    color: $theme1-primary-color;
+    border-bottom-color: adjust-color(
+      $color: $theme1-button-primary-color,
+      $blackness: 40%,
+      $alpha: -0.3
+    ) !important;
+
+    &[data-value="="] {
+      background-color: $theme1-tertiary-color;
+      color: $theme1-button-primary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme1-tertiary-color,
+        $blackness: 40%,
+        $alpha: -0.3
+      ) !important;
+    }
+
+    &[data-value="DEL"],
+    &[data-value="RESET"] {
+      background-color: $theme1-button-secondary-color;
+      color: $theme1-button-primary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme1-button-secondary-color,
+        $blackness: 40%,
+        $alpha: -0.3
+      ) !important;
+    }
+  }
+}
+
+// Theme 2
+body.theme2 {
+  .body {
+    background-color: adjust-color(
+      $color: $theme2-primary-color,
+      $blackness: $theme2-primary-blackness
+    );
+  }
+
+  .button {
+    background-color: $theme2-button-primary-color;
+    color: $theme2-secondary-color;
+    border-bottom-color: adjust-color(
+      $color: $theme2-button-primary-color,
+      $blackness: $theme2-button-blackness
+    ) !important;
+
+    &[data-value="="] {
+      background-color: $theme2-tertiary-color;
+      color: $theme2-button-primary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme2-tertiary-color,
+        $blackness: $theme2-button-blackness
+      ) !important;
+    }
+
+    &[data-value="DEL"],
+    &[data-value="RESET"] {
+      background-color: $theme2-button-secondary-color;
+      color: $theme2-button-primary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme2-button-secondary-color,
+        $blackness: $theme2-button-blackness
+      ) !important;
+    }
+  }
+}
+
+// Theme 3
+body.theme3 {
+  .body {
+    background-color: adjust-color(
+      $color: $theme3-primary-color,
+      $blackness: $theme3-primary-blackness
+    );
+  }
+
+  .button {
+    background-color: adjust-color(
+      $color: $theme3-button-primary-color,
+      $alpha: -0.8
+    );
+    color: $theme3-secondary-color;
+    border-bottom-color: adjust-color(
+      $color: $theme3-button-primary-color,
+      $lightness: 10%
+    ) !important;
+
+    &[data-value="="] {
+      background-color: $theme3-tertiary-color;
+      color: $theme3-button-primary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme3-tertiary-color,
+        $lightness: 30%
+      ) !important;
+    }
+
+    &[data-value="DEL"],
+    &[data-value="RESET"] {
+      background-color: adjust-color(
+        $color: $theme3-button-primary-color,
+        $lightness: 5%
+      );
+      color: $theme3-button-secondary-color;
+      border-bottom-color: adjust-color(
+        $color: $theme3-button-secondary-color,
+        $alpha: -0.8
+      ) !important;
+    }
+  }
+}
