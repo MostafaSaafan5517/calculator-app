@@ -33,10 +33,6 @@ function Button({ value }: { value: string }) {
     }
   };
 
-  document.body.addEventListener("keydown", (event) => {
-    console.log(event.key);
-  });
-
   return (
     <section className="button" data-value={value} onClick={handleBtnClick}>
       {value}
@@ -45,6 +41,10 @@ function Button({ value }: { value: string }) {
 }
 
 function AppBody() {
+  document.body.addEventListener("keydown", (event) => {
+    console.log(event.key);
+  });
+
   return (
     <section className="body">
       <Button value="7" />
