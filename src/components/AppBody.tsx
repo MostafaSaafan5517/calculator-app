@@ -41,8 +41,45 @@ function Button({ value }: { value: string }) {
 }
 
 function AppBody() {
+  const keys = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+    ".",
+    "*",
+    "/",
+    "+",
+    "-",
+    "Delete",
+    "Backspace",
+    "Enter",
+  ];
+
   document.body.addEventListener("keydown", (event) => {
-    console.log(event.key);
+    if (keys.includes(event.key)) {
+      let el;
+      if (event.key === "Enter") {
+        el = document.querySelector(".button[data-value='=']") as HTMLElement;
+      } else if (event.key === "Backspace") {
+        el = document.querySelector(".button[data-value='DEL']") as HTMLElement;
+      } else if (event.key === "Delete") {
+        el = document.querySelector(
+          ".button[data-value='RESET']"
+        ) as HTMLElement;
+      } else {
+        el = document.querySelector(
+          `.button[data-value='${event.key}']`
+        ) as HTMLElement;
+      }
+      el.click();
+    }
   });
 
   return (
