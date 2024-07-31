@@ -13,12 +13,16 @@ export const resultSlice = createSlice({
   initialState,
   reducers: {
     displayData: (state, action: PayloadAction<string>) => {
-      if (action.payload === "") {
+      if (state.value === "Error") {
         state.value = "";
-      } else if (action.payload === "DEL") {
-        state.value = state.value.slice(0, -1);
       } else {
-        state.value += action.payload;
+        if (action.payload === "") {
+          state.value = "";
+        } else if (action.payload === "DEL") {
+          state.value = state.value.slice(0, -1);
+        } else {
+          state.value += action.payload;
+        }
       }
     },
 
@@ -55,6 +59,7 @@ export const resultSlice = createSlice({
             break;
         }
       }
+
       state.value = String(result) === "NaN" ? "Error" : String(result);
     },
   },
