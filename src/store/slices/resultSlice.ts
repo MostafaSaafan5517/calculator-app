@@ -14,7 +14,7 @@ export const resultSlice = createSlice({
   reducers: {
     displayData: (state, action: PayloadAction<string>) => {
       if (state.value === "Error") {
-        state.value = "";
+        state.value = action.payload;
       } else {
         if (action.payload === "") {
           state.value = "";
